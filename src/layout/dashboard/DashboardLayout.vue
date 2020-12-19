@@ -3,22 +3,7 @@
     <side-bar>
       <template slot="links">
         <sidebar-link to="/Home" name="หน้าแรก" icon="ti-home" />
-        <sidebar-link to="/stats" name="พนักงาน" icon="ti-user" />
-        <li class="nav-item">
-          <!--<drop-down
-            class="nav-item"
-            title="พนักงาน"
-            title-classes="nav-link"
-            icon="ti-user"
-          >
-            <sidebar-link to="/stats" name="พนักงาน" icon="ti-user" /> -->
-          <a href="#" class="nav-link"><i class="ti-user"></i>พนักงาน</a>
-          <div class="smenu">
-            <a href="#">การจัดการพนักงาน</a>
-            <a href="#">2post</a>
-          </div>
-          <!-- </drop-down> -->
-        </li>
+        <sidebar-link to="/stats" name="พนักงาน" icon="ti-user" :dropdown="[{name:'menu 1'},{name: 'menu 2'}]"/>
         <sidebar-link
           to="/table-list"
           name="ตารางเวลางาน"

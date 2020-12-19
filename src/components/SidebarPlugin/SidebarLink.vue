@@ -7,9 +7,13 @@
     <a class="nav-link">
       <slot>
         <i v-if="icon" :class="icon"></i>
-        <p>{{name}}</p>
+        <p>{{name}} </p>
       </slot>
+      <i v-if="dropdown" class="ti-angle-down"></i>
     </a>
+    <div v-if="dropdown" class="smenu">
+      <a href="#" v-for="d in dropdown" :key="d.name">{{ d.name }}</a>
+    </div>
   </component>
 </template>
 <script>
@@ -33,6 +37,10 @@ export default {
     tag: {
       type: String,
       default: "router-link"
+    },
+    dropdown: {
+      type: Object,
+      defult: null
     }
   },
   methods: {
