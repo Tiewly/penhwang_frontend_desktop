@@ -1,15 +1,19 @@
 <template>
-  <component :is="tag"
-             @click.native="hideSidebar"
-             class="nav-item"
-             v-bind="$attrs"
-             tag="li">
+  <component
+    :is="tag"
+    @click.native="hideSidebar"
+    class="nav-item"
+    v-bind="$attrs"
+    tag="li"
+  >
     <a class="nav-link">
-      <slot>
-        <i v-if="icon" :class="icon"></i>
-        <p>{{name}} </p>
-      </slot>
-      <i v-if="dropdown" class="ti-angle-down"></i>
+      <div style="display: flex">
+        <slot>
+          <i v-if="icon" :class="icon"></i>
+          <p>{{ name }}</p>
+        </slot>
+        <i v-if="dropdown" class="ti-angle-down" style="margin-left: auto"></i>
+      </div>
     </a>
     <div v-if="dropdown" class="smenu">
       <a href="#" v-for="d in dropdown" :key="d.name">{{ d.name }}</a>
@@ -22,26 +26,26 @@ export default {
   inheritAttrs: false,
   inject: {
     autoClose: {
-      default: true
+      default: true,
     },
     addLink: {
-      default: ()=>{}
+      default: () => {},
     },
     removeLink: {
-      default: ()=>{}
-    }
+      default: () => {},
+    },
   },
   props: {
     name: String,
     icon: String,
     tag: {
       type: String,
-      default: "router-link"
+      default: "router-link",
     },
     dropdown: {
       type: Array,
-      defult: null
-    }
+      defult: null,
+    },
   },
   methods: {
     hideSidebar() {
@@ -51,7 +55,7 @@ export default {
     },
     isActive() {
       return this.$el.classList.contains("active");
-    }
+    },
   },
   mounted() {
     if (this.addLink) {
@@ -60,12 +64,12 @@ export default {
   },
   beforeDestroy() {
     if (this.$el && this.$el.parentNode) {
-      this.$el.parentNode.removeChild(this.$el)
+      this.$el.parentNode.removeChild(this.$el);
     }
     if (this.removeLink) {
       this.removeLink(this);
     }
-  }
+  },
 };
 </script>
 <style>

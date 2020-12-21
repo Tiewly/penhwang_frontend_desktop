@@ -3,14 +3,29 @@
     <side-bar>
       <template slot="links">
         <sidebar-link to="/Home" name="หน้าแรก" icon="ti-home" />
-        <sidebar-link to="/stats" name="พนักงาน" icon="ti-user" :dropdown="[{name:'menu 1'},{name: 'menu 2'}]"/>
+        <sidebar-link
+          to="/stats"
+          name="พนักงาน"
+          icon="ti-user"
+          :dropdown="[{ name: 'จัดการแผนก' }]"
+        />
         <sidebar-link
           to="/table-list"
           name="ตารางเวลางาน"
           icon="ti-view-list-alt"
         />
-        <sidebar-link to="/typography" name="วันลา" icon="ti-calendar" />
-        <sidebar-link to="/icons" name="เงินเดือน" icon="ti-money" />
+        <sidebar-link
+          to="/typography"
+          name="วันลา"
+          icon="ti-calendar"
+          :dropdown="[{ name: 'ประเภทการลา' }, { name: 'สิทธิ์วันลาคงเหลือ' }]"
+        />
+        <sidebar-link
+          to="/icons"
+          name="เงินเดือน"
+          icon="ti-money"
+          :dropdown="[{ name: 'สรุปเข้า-ออกงาน' }]"
+        />
         <sidebar-link to="/maps" name="จุดลงเวลา" icon="ti-location-pin" />
         <sidebar-link to="/notifications" name="บริษัท" icon="ti-briefcase" />
         <sidebar-link to="/Setting" name="ตั้งค่า" icon="ti-settings" />
