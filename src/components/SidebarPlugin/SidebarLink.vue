@@ -39,7 +39,7 @@ export default {
       default: "router-link"
     },
     dropdown: {
-      type: Object,
+      type: Array,
       defult: null
     }
   },
