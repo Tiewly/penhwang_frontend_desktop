@@ -117,6 +117,15 @@
     @include opacity(1);
     visibility: visible;
   }
+  &.is-active .dropdown-menu{
+    @include opacity(1);
+    visibility: visible;
+
+    .dropdown-item:hover,
+    .dropdown-item:focus{
+      background-color: white;
+    }
+  }
 }
 
 //fix bug for the select items in btn-group

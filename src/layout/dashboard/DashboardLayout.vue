@@ -14,6 +14,7 @@
         <sidebar-link to="/maps" name="จุดลงเวลา" icon="ti-location-pin" />
         <sidebar-link to="/notifications" name="บริษัท" icon="ti-briefcase" />
         <sidebar-link to="/Setting" name="ตั้งค่า" icon="ti-settings" />
+        <sidebar-link to="/Clock" name="ทดสอบเข้า-ออกงาน" icon="ti-calendar" />
       </template>
       <mobile-menu>
         <li class="nav-item">

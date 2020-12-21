@@ -12,6 +12,7 @@ import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
 import Home from "@/pages/PenHwang/Home.vue";
 import Setting from "@/pages/PenHwang/Setting.vue";
+import Clock from "@/pages/Clock.vue";
 
 const routes = [
   {
@@ -63,6 +64,11 @@ const routes = [
         path: "Setting",
         name: "Setting",
         component: Setting
+      },
+      {
+        path: "Clock/user/:userId/replyToken/:replyToken",
+        name: "Clock",
+        component: Clock
       }
     ]
   },
