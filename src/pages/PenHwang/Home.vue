@@ -5,71 +5,91 @@
         <!-- <card title="Notifications" sub-title="Custom Vue notifications plugin"> -->
         <card :title="'วันที่ ' + now">
           <div>
+            <br />
             <div class="row">
               <div class="col-md-6">
                 <h6>จำนวนปัจจุบัน</h6>
-                <div class="alert alert-success">
+                <div class="alert alert-success alert-with-icon">
                   <span class="title">
-                    <p><i class="ti-angle-down"></i>เข้างาน</p>
+                    <p>
+                      <span data-notify="icon" class="ti-face-smile"></span
+                      >เข้างาน
+                    </p>
                     <p style="font-size: 20px">13</p>
                   </span>
                 </div>
-                <div class="alert alert-warning">
+                <div class="alert alert-warning alert-with-icon">
                   <span class="title">
-                    <p><i class="ti-angle-down"></i>สาย</p>
+                    <p>
+                      <span data-notify="icon" class="ti-face-smile"></span>สาย
+                    </p>
                     <p style="font-size: 20px">3</p>
                   </span>
                 </div>
-                <div class="alert alert-danger">
+                <div class="alert alert-danger alert-with-icon">
                   <span class="title">
-                    <p><i class="ti-angle-down"></i>ยังไม่เข้า</p>
+                    <p>
+                      <span data-notify="icon" class="ti-face-smile"></span
+                      >ยังไม่เข้า
+                    </p>
                     <p style="font-size: 20px">10</p>
                   </span>
                 </div>
-                <div class="alert alert-info">
+                <div class="alert alert-info alert-with-icon">
                   <span class="title">
-                    <p><i class="ti-angle-down"></i>ออกงาน</p>
+                    <p>
+                      <span data-notify="icon" class="ti-face-smile"></span
+                      >ออกงาน
+                    </p>
                     <p style="font-size: 20px">0</p>
                   </span>
                 </div>
               </div>
               <div class="col-md-6">
                 <h5>ประวัติการเข้า-ออกงาน</h5>
-                <div class="alert alert-info">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span>
-                    <b> Info - </b> This is a regular notification made with
-                    ".alert-info"</span
-                  >
-                </div>
-                <div class="alert alert-success">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span>
-                    <b> Success - </b> This is a regular notification made with
-                    ".alert-success"</span
-                  >
-                </div>
-                <div class="alert alert-warning">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span>
-                    <b> Warning - </b> This is a regular notification made with
-                    ".alert-warning"</span
-                  >
-                </div>
-                <div class="alert alert-danger">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span>
-                    <b> Danger - </b> This is a regular notification made with
-                    ".alert-danger"</span
-                  >
+                <div class="my-table">
+                  <div class="alert alert-warning">
+                    <a>สาย</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
+                  <div class="alert alert-success">
+                    <a>เข้างาน</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
+                  <div class="alert alert-success">
+                    <a>เข้างาน</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
+                  <div class="alert alert-success">
+                    <a>เข้างาน</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
+                  <div class="alert alert-success">
+                    <a>เข้างาน</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
+                  <div class="alert alert-info">
+                    <a>ออกงาน</a>
+                    <span class="titleCard">
+                      <h6>สมศรี ใจรักเธอ</h6>
+                      <h6>8:50</h6>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,34 +97,68 @@
         </card>
       </b-tab-item>
 
-      <b-tab-item label="Music">
-        Lorem <br />
-        ipsum <br />
-        dolor <br />
-        sit <br />
-        amet.
-      </b-tab-item>
+      <b-tab-item label="แจ้งเตือน">
+        <card>
+          <div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>ประวัติการเข้า-ออกงาน</h5>
 
-      <b-tab-item :visible="showBooks" label="Books">
-        What light is light, if Silvia be not seen? <br />
-        What joy is joy, if Silvia be not by— <br />
-        Unless it be to think that she is by <br />
-        And feed upon the shadow of perfection? <br />
-        Except I be by Silvia in the night, <br />
-        There is no music in the nightingale.
-      </b-tab-item>
-
-      <b-tab-item label="Videos" disabled>
-        Nunc nec velit nec libero vestibulum eleifend. Curabitur pulvinar congue
-        luctus. Nullam hendrerit iaculis augue vitae ornare. Maecenas vehicula
-        pulvinar tellus, id sodales felis lobortis eget.
+                <div class="alert alert-warning">
+                  <a>สาย</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+                <div class="alert alert-success">
+                  <a>เข้างาน</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+                <div class="alert alert-success">
+                  <a>เข้างาน</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+                <div class="alert alert-success">
+                  <a>เข้างาน</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+                <div class="alert alert-success">
+                  <a>เข้างาน</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+                <div class="alert alert-info">
+                  <a>ออกงาน</a>
+                  <span class="titleCard">
+                    <h6>สมศรี ใจรักเธอ</h6>
+                    <h6>8:50</h6>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </card>
       </b-tab-item>
     </b-tabs>
   </section>
 </template>
 
 <script>
+import Card from "../../components/Cards/Card.vue";
 export default {
+  components: { Card },
   data() {
     return {
       activeTab: 0,
@@ -136,7 +190,14 @@ export default {
 .title {
   display: flex;
   justify-content: space-between;
-  /* font-size: 22px; */
-  font-weight: 500;
+}
+.titleCard {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.my-table {
+  max-height: 385px;
+  overflow-y: auto;
 }
 </style>
