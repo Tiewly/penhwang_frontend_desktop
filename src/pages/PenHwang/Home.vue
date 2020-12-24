@@ -99,54 +99,40 @@
 
       <b-tab-item label="แจ้งเตือน">
         <card>
-          <div>
-            <div class="row">
-              <div class="col-md-6">
-                <h5>ประวัติการเข้า-ออกงาน</h5>
-
-                <div class="alert alert-warning">
-                  <a>สาย</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-                <div class="alert alert-success">
-                  <a>เข้างาน</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-                <div class="alert alert-success">
-                  <a>เข้างาน</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-                <div class="alert alert-success">
-                  <a>เข้างาน</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-                <div class="alert alert-success">
-                  <a>เข้างาน</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-                <div class="alert alert-info">
-                  <a>ออกงาน</a>
-                  <span class="titleCard">
-                    <h6>สมศรี ใจรักเธอ</h6>
-                    <h6>8:50</h6>
-                  </span>
-                </div>
-              </div>
+          <h5
+            @click="showWaittingList = !showWaittingList"
+            style="cursor: pointer"
+            slot="header"
+          >
+            <span
+              v-if="showWaittingList"
+              data-notify="icon"
+              class="ti-angle-down"
+            ></span>
+            <span v-else data-notify="icom" class="ti-angle-up"></span>
+            รอการอนุมัติ
+          </h5>
+          <div v-if="showWaittingList">
+            <div class="alert alert-warning">
+              <a>สาย</a>
+              <span class="titleCard">
+                <h6>สมศรี ใจรักเธอ</h6>
+                <h6>8:50</h6>
+              </span>
+            </div>
+            <div class="alert alert-success">
+              <a>เข้างาน</a>
+              <span class="titleCard">
+                <h6>สมศรี ใจรักเธอ</h6>
+                <h6>8:50</h6>
+              </span>
+            </div>
+            <div class="alert alert-info">
+              <a>ออกงาน</a>
+              <span class="titleCard">
+                <h6>สมศรี ใจรักเธอ</h6>
+                <h6>8:50</h6>
+              </span>
             </div>
           </div>
         </card>
@@ -164,6 +150,7 @@ export default {
       activeTab: 0,
       showBooks: false,
       now: "",
+      showWaittingList: true,
     };
   },
   created() {
