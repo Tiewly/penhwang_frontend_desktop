@@ -2,12 +2,13 @@
   <div>
     <p>hello user "{{ userId }}" this is clock page</p>
     <p>your reply token is {{ replyToken }}</p>
-    <button @click="getLocation">get location</button>
+    <b-button @click="getLocation" type="is-primary" class="my-btn">get location สวัสดี</b-button>
     <div id="location">
       <p>latitude: {{ userCurrentPosition.latitude}}</p>
       <p>longitude: {{ userCurrentPosition.longitude }}</p>
     </div>
     <section>
+      <p>{{ datetime }}</p>
       <b-field label="Select datetime">
         <b-datetimepicker
           rounded
@@ -16,7 +17,8 @@
           :locale="locale"
           :datepicker="{ showWeekNumber }"
           :timepicker="{ enableSeconds, hourFormat }"
-          horizontal-time-picker>
+          horizontal-time-picker
+          v-model="datetime">
         </b-datetimepicker>
       </b-field>
     </section>
@@ -57,4 +59,4 @@
     },
   }
 </script>
-<style scoped src='./../../node_modules/buefy/dist/buefy.css' />
+
